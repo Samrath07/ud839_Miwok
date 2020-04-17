@@ -35,16 +35,16 @@ public class WordAdapter extends ArrayAdapter<Word> {
             listViewItem = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
-        Word currentWordFlavor = getItem(position);
+        Word currentWord = getItem(position);
 
         TextView miwokTextView = listViewItem.findViewById(R.id.miwokWord);
 
-        assert currentWordFlavor != null;
-        miwokTextView.setText(currentWordFlavor.getMiwokTranslation());
+        assert currentWord != null;
+        miwokTextView.setText(currentWord.getMiwokTranslation());
 
         TextView defaultTextView = listViewItem.findViewById(R.id.englishWord);
 
-        defaultTextView.setText(currentWordFlavor.getDefaultTranslation());
+        defaultTextView.setText(currentWord.getDefaultTranslation());
 
         return listViewItem;
 
