@@ -47,9 +47,8 @@ public class PhrasesActivity extends AppCompatActivity {
 
 
 
-        int size = words.size();
 
-        WordAdapter wordsAdapter = new WordAdapter(this,words);
+        WordAdapter wordsAdapter = new WordAdapter(this,words,R.color.category_phrases);
 
         ListView listView = findViewById(R.id.item_list);
 

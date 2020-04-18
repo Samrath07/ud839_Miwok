@@ -32,23 +32,18 @@ public class NumbersActivity extends AppCompatActivity {
 
         ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new Word("lutti","one"));
-        words.add(new Word("otiiko","two"));
-        words.add(new Word("tolookosu","three"));
-        words.add(new Word("oyyissa","four"));
-        words.add(new Word("massoka","five"));
-        words.add(new Word("temmokka","six"));
-        words.add(new Word("keneaku","seven"));
-        words.add(new Word("kewanto","eight"));
-        words.add(new Word("wo'e","nine"));
-        words.add(new Word("na'aacha","ten"));
+        words.add(new Word("lutti","one",R.drawable.number_one));
+        words.add(new Word("otiiko","two",R.drawable.number_two));
+        words.add(new Word("tolookosu","three",R.drawable.number_three));
+        words.add(new Word("oyyissa","four",R.drawable.number_four));
+        words.add(new Word("massoka","five",R.drawable.number_five));
+        words.add(new Word("temmokka","six",R.drawable.number_six));
+        words.add(new Word("keneaku","seven",R.drawable.number_seven));
+        words.add(new Word("kewanto","eight",R.drawable.number_eight));
+        words.add(new Word("wo'e","nine",R.drawable.number_nine));
+        words.add(new Word("na'aacha","ten",R.drawable.number_ten));
 
-
-
-
-        int size = words.size();
-
-        WordAdapter wordsAdapter = new WordAdapter(this,words);
+        WordAdapter wordsAdapter = new WordAdapter(this,words,R.color.category_numbers);
 
         ListView listView = findViewById(R.id.item_list);
 

@@ -1,23 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools = "http://schemas.android.com/tools"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16sp">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:minHeight="@dimen/list_item_height"
+    android:background="@color/tan_background">
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@color/tan_background"
+        android:contentDescription="@string/todo" />
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/text_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/miwokWord"
-        tools:text="@string/lutti"/>
+        android:padding="15sp"
+        android:layout_height="@dimen/list_item_height"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/englishWord"
-        tools:text="@string/one"/>
+        <TextView
+            android:id="@+id/miwokWord"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:textColor="#FFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margintop"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            tools:text="@string/lutti" />
 
+        <TextView
+            android:id="@+id/englishWord"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:textStyle="bold"
+            android:textColor="#FFFF"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            tools:text="@string/one" />
 
+    </LinearLayout>
 </LinearLayout>
