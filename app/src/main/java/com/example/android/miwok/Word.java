@@ -1,5 +1,7 @@
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
+
 class Word {
 
 
@@ -8,6 +10,8 @@ class Word {
         private String mDefaultTranslation;
 
         private String mMiwokTranslation;
+
+        private int audioResourceId;
 
 
         private static final int NO_IMAGE_PROVIDED = -1;
@@ -18,19 +22,22 @@ class Word {
 
 
 
-        Word(String DefaultTranslation, String MiwokTranslation){
+        Word(String DefaultTranslation, String MiwokTranslation ,int audioResource){
 
             mDefaultTranslation = DefaultTranslation;
             mMiwokTranslation = MiwokTranslation;
+            audioResourceId = audioResource;
 
 
 
         }
-        Word(String DefaultTranslation, String MiwokTranslation,int imageResourceId){
+        Word(String DefaultTranslation, String MiwokTranslation,int imageResourceId, int audioResource){
 
             mDefaultTranslation = DefaultTranslation;
             mMiwokTranslation = MiwokTranslation;
             imageResource = imageResourceId;
+            audioResourceId = audioResource;
+
 
     }
 
@@ -60,7 +67,10 @@ class Word {
 
         }
 
+        int getAudioResourceId(){
 
+            return audioResourceId;
+        }
 
     }
 

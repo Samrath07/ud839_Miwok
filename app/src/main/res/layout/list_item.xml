@@ -20,7 +20,12 @@
         android:layout_width="match_parent"
         android:padding="15sp"
         android:layout_height="@dimen/list_item_height"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <TextView
             android:id="@+id/miwokWord"
@@ -30,7 +35,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="@dimen/margintop"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="0sp"
             tools:text="@string/lutti" />
 
@@ -41,9 +46,13 @@
             android:gravity="top"
             android:textStyle="bold"
             android:textColor="#FFFF"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="0sp"
             tools:text="@string/one" />
 
+        </LinearLayout>
+
     </LinearLayout>
+
+
 </LinearLayout>
